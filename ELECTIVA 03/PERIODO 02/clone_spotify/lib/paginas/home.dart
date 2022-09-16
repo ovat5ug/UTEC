@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                     children: [Text("data")],
                   )
                 ],*/
-                  children: List.generate(grupos_rock1.length, (index) {
+                  children: List.generate(song_type_1.length, (index) {
                 return Padding(
                   padding: const EdgeInsets.only(
                       left: 25, right: 25), //espaciado del arreglo
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Text(
-                          grupos_rock[index],
+                          song_type_1[index],
                           style: TextStyle(
                               fontSize: 15,
                               color: menu_activo == index
