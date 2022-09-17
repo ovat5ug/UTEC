@@ -80,6 +80,8 @@ class _HomeState extends State<Home> {
                       });
                     },
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment
+                          .center, //alineacion desde el inicio
                       children: [
                         Text(
                           song_type_1[index],
@@ -88,16 +90,86 @@ class _HomeState extends State<Home> {
                               color: menu_activo == index
                                   ? primario
                                   : Color.fromARGB(220, 187, 206, 189),
-                              //color: gris, color acignado a la pestaña activa
+                              //"Color.fromARGB()," asignado a la pestaña inactiva (gris)
                               fontWeight: FontWeight.w600),
-                        )
+                        ),
+                        SizedBox(
+                            height:
+                                3), //crea un tamaño de caja de un espacio det.
+                        menu_activo == index
+                            ? Container(
+                                //dibuja el contenedor cuando esta activo
+                                //tamaño del contenedor
+                                width: 20,
+                                height: 3,
+                                decoration: BoxDecoration(
+                                  color: menu_activo == index
+                                      ? Colors.lightBlueAccent
+                                      : primario,
+                                  //"Colors.lightBlueAccent," asignado a la pestaña activa (celeste)
+                                  borderRadius: BorderRadius.circular(
+                                      5), //crea un borfe tipo subrayado
+                                ),
+                              )
+                            : Container(),
+                        //":Container()," es necesario crear una parte a evaluar que sea fañsa es decir en este caso un contenedor vacio
+                        //para cuando no este posicionado el touch, todo lo demas este sin color
                       ],
                     ),
                   ),
                 );
               })),
             ),
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SingleChildScrollView(
+            //convertimos el "Padding" en Center y luego lo renombramos a un
+            //"SingleChildScrollView" para configurar, la direcion del movimiento del scroll
+            scrollDirection: Axis
+                .horizontal, //se ordena que el movimiento del scroll sea horizontal
+            child: Padding(
+              //convertimos el "Row" en un "Padding" para configurar,
+              //un espaciado al contenedor a un elemento
+              padding: const EdgeInsets.only(
+                left: 40, //padding hacia la izquierda de 40px
+              ),
+              child: Row(
+                children: List.generate(10, (index) {
+                  //genera una lista de "N" espacios
+                  return Padding(
+                    //convertimos el return "GestureDetector" en un
+                    //"Padding" para configurar, un espaciado al contenedor a un elemento
+                    padding: const EdgeInsets.only(
+                      right: 40, //padding hacia la derecha de 40px
+                    ),
+                    child: GestureDetector(
+                      //convertimos el return "Column" en widget y luego lo renombramos a un
+                      //"GestureDetector" para configurar, la deteccion de cuando se pulsa a un elemento
+                      onTap: () {
+                        //captura evento cuando el dedo presiona la pantalla
+                        setState(() {
+                          menu_activo = index;
+                        });
+                      },
+
+                      child: Column(
+                        children: [
+                          Container(
+                            //contendor que da tamaño a la caja
+                            width: 180,
+                            height: 180,
+                            decoration: BoxDecoration(color: primario),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+              ),
+            ),
+          ),
         ],
       ),
     );
