@@ -7,4 +7,5 @@ const Color negro = Color(0x0F174C8A);
 
 /*INICIO variables de contenedores*/
 int menu_activo = 0;
+int menu_activo2 = 0;
 /*FIN variables de contenedores*/

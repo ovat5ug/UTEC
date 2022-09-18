@@ -229,6 +229,7 @@ const List song_type_2 = [
 ];
 
 const List songs = [
+//children: List.generate(songs.length, (index) {}//de aqui es donde toma el tamaño de la informacion a evaluar
   {
     "img": "assets/images/img_3.jpg",
     "title": "Feelin' Good",
@@ -408,5 +409,5 @@ const List songs = [
       {"title": "Trees", "duration": "1:51"},
       {"title": "Earth", "duration": "1:39"},
     ]
-  }
+  },
 ];
