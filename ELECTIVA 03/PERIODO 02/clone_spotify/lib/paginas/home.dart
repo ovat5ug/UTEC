@@ -2,7 +2,7 @@
 import 'package:clone_spotify/paginas/album.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_spotify/temas/colores.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart'; //flutter pub add flutter_feather_icons
 import 'package:clone_spotify/paginas/contenedores.dart';
 import 'package:clone_spotify/paginas/principal.dart';
 import 'package:clone_spotify/json/canciones_json.dart';
@@ -160,14 +160,14 @@ class _HomeState extends State<Home> {
                           menu_activo = index;
                         });*/
                         Navigator.push(
-                            //cambio de widgets => cambio de pagina
+                            //cambio de widgets primero => cambio de pagina
                             context,
                             PageTransition(
                               alignment: Alignment.bottomCenter,
                               child: AlbumesPage(),
                               type: PageTransitionType.scale,
                             ));
-                        //fin cambio de widgets => cambio de pagina
+                        //fin cambio de widgets primero => cambio de pagina
                       },
 
                       child: Column(
@@ -323,10 +323,18 @@ class _HomeState extends State<Home> {
                       //"GestureDetector" para configurar, la deteccion de cuando se pulsa a un elemento
                       onTap: () {
                         //captura evento cuando el dedo presiona la pantalla
-                        setState(() {
-                          menu_activo2 =
-                              index; //este "menu_activo2" independiza el index seleccion en el bloque dos
-                        });
+                        /*setState(() {
+                          menu_activo2 = index; //este "menu_activo2" independiza el index seleccion en el bloque dos
+                        });*/
+                        Navigator.push(
+                            //cambio de widgets segundo => cambio de pagina
+                            context,
+                            PageTransition(
+                              alignment: Alignment.bottomCenter,
+                              child: AlbumesPage(),
+                              type: PageTransitionType.scale,
+                            ));
+                        //fin cambio de widgets segundo => cambio de pagina
                       },
 
                       child: Column(
@@ -411,9 +419,18 @@ class _HomeState extends State<Home> {
                       //"GestureDetector" para configurar, la deteccion de cuando se pulsa a un elemento
                       onTap: () {
                         //captura evento cuando el dedo presiona la pantalla
-                        setState(() {
-                          menu_activo = index;
-                        });
+                        /*setState(() {
+                          menu_activo3 = index; //este "menu_activo2" independiza el index seleccion en el bloque dos
+                        });*/
+                        Navigator.push(
+                            //cambio de widgets tercero => cambio de pagina
+                            context,
+                            PageTransition(
+                              alignment: Alignment.bottomCenter,
+                              child: AlbumesPage(),
+                              type: PageTransitionType.scale,
+                            ));
+                        //fin cambio de widgets tercero => cambio de pagina
                       },
 
                       child: Column(
