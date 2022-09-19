@@ -1,10 +1,13 @@
 /*pagina que recibira la ordenes de los clis de los menus*/
+import 'package:clone_spotify/paginas/album.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_spotify/temas/colores.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:clone_spotify/paginas/contenedores.dart';
 import 'package:clone_spotify/paginas/principal.dart';
 import 'package:clone_spotify/json/canciones_json.dart';
+import 'package:flutter/painting.dart';
+import 'package:page_transition/page_transition.dart'; //flutter pub add page_transition
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -153,9 +156,18 @@ class _HomeState extends State<Home> {
                       //"GestureDetector" para configurar, la deteccion de cuando se pulsa a un elemento
                       onTap: () {
                         //captura evento cuando el dedo presiona la pantalla
-                        setState(() {
+                        /*setState(() {
                           menu_activo = index;
-                        });
+                        });*/
+                        Navigator.push(
+                            //cambio de widgets => cambio de pagina
+                            context,
+                            PageTransition(
+                              alignment: Alignment.bottomCenter,
+                              child: AlbumesPage(),
+                              type: PageTransitionType.scale,
+                            ));
+                        //fin cambio de widgets => cambio de pagina
                       },
 
                       child: Column(
