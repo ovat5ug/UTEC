@@ -1,0 +1,1 @@
+//captura evento de toque y carga contenido al precionar algun "album">
