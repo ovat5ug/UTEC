@@ -164,7 +164,9 @@ class _HomeState extends State<Home> {
                             context,
                             PageTransition(
                               alignment: Alignment.bottomCenter,
-                              child: AlbumesPage(),
+                              child: AlbumesPage(
+                                canciones: songs[index],
+                              ),
                               type: PageTransitionType.scale,
                             ));
                         //fin cambio de widgets primero => cambio de pagina
@@ -331,7 +333,9 @@ class _HomeState extends State<Home> {
                             context,
                             PageTransition(
                               alignment: Alignment.bottomCenter,
-                              child: AlbumesPage(),
+                              child: AlbumesPage(
+                                canciones: songs[index],
+                              ),
                               type: PageTransitionType.scale,
                             ));
                         //fin cambio de widgets segundo => cambio de pagina
@@ -427,7 +431,9 @@ class _HomeState extends State<Home> {
                             context,
                             PageTransition(
                               alignment: Alignment.bottomCenter,
-                              child: AlbumesPage(),
+                              child: AlbumesPage(
+                                canciones: songs[index],
+                              ),
                               type: PageTransitionType.scale,
                             ));
                         //fin cambio de widgets tercero => cambio de pagina
