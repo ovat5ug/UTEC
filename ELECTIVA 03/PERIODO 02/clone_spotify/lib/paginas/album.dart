@@ -57,40 +57,87 @@ class _AlbumesPageState extends State<AlbumesPage> {
               SizedBox(
                 height: 20,
               ),
+              SingleChildScrollView(
+                //convertimos el Padding en "center" y luego lo renombramos a un
+                //"SingleChildScrollView" para configurar, desplazamiento del scroll
+                //INICIO descripcion cancion
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    //espaciado laterales entre el "title" y "suscribete"
+                    left: 30,
+                    right: 30,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceBetween, //recalcula el esacio entre los elementos
+                    children: [
+                      Text(
+                        widget.canciones[
+                            'title'], //captura el titulo de la canción
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: blanco,
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: gris,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Padding(
+                          padding:
+                              //const EdgeInsets.all(8.0),//equivalente a lo de abajo
+                              const EdgeInsets.only(
+                                  left: 8, right: 8, top: 8, bottom: 8),
+                          //efecto de texto coo boton
+                          child: Text(
+                            "Suscribete",
+                            style: TextStyle(color: blanco),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              //FIN descripcion cancion
+              SizedBox(
+                height: 30,
+              ),
               Padding(
                 padding: const EdgeInsets.only(
-                  //espaciado laterales entre el "title" y "suscribete"
                   left: 30,
                   right: 30,
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment
-                      .spaceBetween, //recalcula el esacio entre los elementos
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      widget
-                          .canciones['title'], //captura el titulo de la canción
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: blanco,
-                      ),
-                    ),
                     Container(
-                      decoration: BoxDecoration(
-                        color: gris,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Padding(
-                        padding:
-                            //const EdgeInsets.all(8.0),//equivalente a lo de abajo
-                            const EdgeInsets.only(
-                                left: 8, right: 8, top: 8, bottom: 8),
-                        //efecto de texto coo boton
-                        child: Text(
-                          "Suscribete",
-                          style: TextStyle(color: blanco),
-                        ),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Descargar",
+                            style: TextStyle(
+                              color: mostaza,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Container(
+                            width: 25,
+                            height: 25,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: gris.withOpacity(0.8)),
+                            child: Center(
+                              child: Icon(
+                                Icons.adjust_rounded,
+                                color: musgo,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -103,7 +150,7 @@ class _AlbumesPageState extends State<AlbumesPage> {
                 //convertimos el "Column" en Center y luego lo renombramos a un
                 //"SingleChildScrollView" para configurar, la direcion del movimiento del scroll
                 scrollDirection: Axis
-                    .vertical, //se ordena que el movimiento del scroll sea vertical
+                    .horizontal, //se ordena que el movimiento del scroll sea horizontal
                 child: Column(
                   children: List.generate(songAlbumes.length, (index) {
                     return Padding(
@@ -175,7 +222,7 @@ class _AlbumesPageState extends State<AlbumesPage> {
             ],
           ),
           SafeArea(
-            //convertimos el row en widget y luego lo renombramos a un
+            //convertimos el row en "center" y luego lo renombramos a un
             //"SafeArea" para configurar, en un area segura
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
