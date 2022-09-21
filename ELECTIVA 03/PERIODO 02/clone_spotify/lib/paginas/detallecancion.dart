@@ -8,12 +8,13 @@ class MusicaDetalle extends StatefulWidget {
   final String description;
   //final String song_count;
   //final String date;
-  final String color;
+  final Color color;
   final String song_url;
   //final String songs;
 
-  const MusicaDetalle({
-    super.key,
+  MusicaDetalle({
+    //super.key,
+    required Key key,
     required this.img,
     required this.title,
     required this.description,
@@ -22,7 +23,7 @@ class MusicaDetalle extends StatefulWidget {
     required this.color,
     required this.song_url,
     //required this.songs
-  });
+  }) : super(key: key);
   //const MusicaDetalle({Key? key}) : super(key: key);
 
   @override
@@ -30,6 +31,7 @@ class MusicaDetalle extends StatefulWidget {
 }
 
 class _MusicaDetalleState extends State<MusicaDetalle> {
+  double _ValorSlideActual = 20;
   @override
   Widget build(BuildContext context) {
     return Scaffold();
