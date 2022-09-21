@@ -1,11 +1,13 @@
 //captura evento de toque y carga contenido al precionar algun "album"
 import 'dart:ffi';
+import 'package:clone_spotify/paginas/detallecancion.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_spotify/temas/colores.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:clone_spotify/paginas/contenedores.dart';
 import 'package:clone_spotify/paginas/principal.dart';
 import 'package:clone_spotify/json/canciones_json.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../json/canciones_json.dart';
 
@@ -19,6 +21,7 @@ class AlbumesPage extends StatefulWidget {
 class _AlbumesPageState extends State<AlbumesPage> {
   //final dynamic canciones = 0;//se elimina final porque no genera inicializacion
   //dynamic canciones = 0;// se mueve por el orden de lectura
+  dynamic cancion3s;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,7 +118,28 @@ class _AlbumesPageState extends State<AlbumesPage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 30),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                alignment: Alignment.bottomCenter,
+                                /*child: AlbumesPage(
+                                  canciones: widget.canciones['title'],
+                                ),*/
+                                child: MusicaDetalle(
+                                  title: widget.canciones[index]['title'],
+                                  color: widget.canciones[index]['color'],
+                                  description: widget.canciones[index]
+                                      ['description'],
+                                  img: widget.canciones[index]['img'],
+                                  song_url: widget.canciones[index]['song_url'],
+                                  key: widget.canciones[index]
+                                      ['key'], //necesita el key
+                                ),
+                                type: PageTransitionType.scale,
+                              ),
+                            );
+                          },
                           child: Column(
                             children: [
                               Container(
@@ -239,7 +263,28 @@ class _AlbumesPageState extends State<AlbumesPage> {
                         bottom: 10,
                       ),
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            PageTransition(
+                              alignment: Alignment.bottomCenter,
+                              /*child: AlbumesPage(
+                                  canciones: widget.canciones['title'],
+                                ),*/
+                              child: MusicaDetalle(
+                                title: widget.canciones[index]['title'],
+                                color: widget.canciones[index]['color'],
+                                description: widget.canciones[index]
+                                    ['description'],
+                                img: widget.canciones[index]['img'],
+                                song_url: widget.canciones[index]['song_url'],
+                                key: widget.canciones[index]
+                                    ['key'], //necesita el key
+                              ),
+                              type: PageTransitionType.scale,
+                            ),
+                          );
+                        },
                         child: Row(
                           children: [
                             Container(
