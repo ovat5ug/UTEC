@@ -209,15 +209,6 @@ class _HomePageState extends State<HomePage>
                     const SizedBox(
                       width: 15.0,
                     ),
-                    menus(
-                      "assets/pict/pizza04.jpg",
-                      "pizza calsone",
-                      "test",
-                      "40.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
                   ],
                 ),
                 ListView(
@@ -292,7 +283,7 @@ class _HomePageState extends State<HomePage>
                       width: 15.0,
                     ),
                     menus(
-                      "assets/pict/tacos04.jpg",
+                      "assets/pict/tacos04.png",
                       "tacos mix",
                       "test",
                       "250.00",
