@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Parcial 2 , Tortas el SARCO',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(226, 226, 222, 233),
+        scaffoldBackgroundColor: Color.fromARGB(224, 139, 248, 197),
       ),
       home: HomePage(),
     );

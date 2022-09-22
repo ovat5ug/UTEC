@@ -107,10 +107,10 @@ class _HomePageState extends State<HomePage>
             ),
             TabBar(
               indicatorColor:
-                  Color.fromARGB(255, 252, 252, 252), //menu activo border
+                  Color.fromARGB(255, 255, 0, 0), //menu activo border
               unselectedLabelColor:
                   Color.fromARGB(26, 252, 0, 0), //menu inactivo
-              labelColor: Color.fromARGB(255, 255, 255, 255), //menu activo
+              labelColor: Color.fromARGB(255, 6, 53, 5), //menu activo
               isScrollable: true,
               labelStyle: const TextStyle(fontSize: 17.0),
               controller: _tabController,
