@@ -26,7 +26,7 @@ class _PlayGuanState extends State<PlayGuan> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: azulPrincipal), //HEX #018db1
+      theme: ThemeData(scaffoldBackgroundColor: azulPrincipal),
       routes: {"/": (context) => paginaPrincipal()},
     );
   }
