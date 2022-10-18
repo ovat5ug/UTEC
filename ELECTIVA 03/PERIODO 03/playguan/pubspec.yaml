@@ -61,7 +61,23 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets/img/
+   - assets/img/caratulas/anime/2015-11-21 18.48.58.png
+   - assets/img/caratulas/peliculas/estrenos/pelicula00.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula01.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula02.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula03.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula04.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula05.jpg
+   - assets/img/caratulas/peliculas/estrenos/pelicula06.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN00.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN01.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN02.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN03.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN04.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN05.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN06.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN07.jpg
+   - assets/img/caratulas/peliculas/nuevos/peliculaN08.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
