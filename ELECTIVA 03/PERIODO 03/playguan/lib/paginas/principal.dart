@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:playguan/paginas/variablesGoblales.dart';
 import 'package:flutter/painting.dart';
+import 'package:playguan/widgets/estrenosVideosWidget.dart';
+import 'package:playguan/widgets/nuevosVideosWidget.dart';
 
 class paginaPrincipal extends StatelessWidget {
   const paginaPrincipal({super.key});
@@ -88,6 +90,11 @@ class paginaPrincipal extends StatelessWidget {
               SizedBox(
                 height: 30,
               ), //altura entre contendores
+              estrenosWidget(), //invocacion de "estrenosVideosWidget"
+              SizedBox(
+                height: 30,
+              ), //altura entre contendores
+              nuevosWidget(), //invocacion de "estrenosVideosWidget"
             ],
           ),
         ),
