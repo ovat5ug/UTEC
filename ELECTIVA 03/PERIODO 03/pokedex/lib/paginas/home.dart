@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 //"flutter pub add http" instalar libreria para que busque el valor de los enlaces "http"
@@ -15,6 +16,7 @@ class principalHome extends StatefulWidget {
 class _principalHomeState extends State<principalHome> {
   var pokeApi =
       "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
+  late List pokeDesk;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +32,14 @@ class _principalHomeState extends State<principalHome> {
     );
   }
 
+  @override
+  void initState() {
+    super.initState();
+    if (mounted) {
+      datosPokemon();
+    }
+  }
+
   void datosPokemon() {
     void main(List<String> arguments) async {
       // This example uses the Google Books API to search for books about http.
@@ -39,9 +49,14 @@ class _principalHomeState extends State<principalHome> {
           Uri.https('raw.githubusercontent.com',
               '/Biuni/PokemonGO-Pokedex/master/pokedex.json');
       http.get(url).then((value) {
-        //print(value.body)
-        var pokeJsonData = jsonDecode(value.body);
-        print(pokeJsonData);
+        if (value.statusCode == 200) {
+          //print(value.body)
+          var pokeJsonData = jsonDecode(value.body);
+          //print(pokeJsonData);
+          pokeDesk = pokeJsonData['pokemon'];
+          //print(pokeDesk[0]['name']);
+          setState(() {});
+        }
       });
     }
   }
