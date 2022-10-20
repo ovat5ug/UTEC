@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:legacy_buttons/LegacyRaisedButton.dart';
 import 'package:pokedex/paginas/gif.dart';
 import 'package:pokedex/paginas/home.dart';
 import 'package:http/http.dart' as http;
@@ -31,15 +32,36 @@ class pokeDesk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: principalHome(),
+      //home: principalHome(),
       title: 'Api Rest',
-      //home: Scaffold(
-      //  appBar: AppBar(
-      //  title: Text('Material Appi'),
-      //),
-      //body: Center(
-      //child: Container(child: Text("saludos")),
-      //)),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Material Appi'),
+          ),
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: EdgeInsets.all(20),
+                child: LegacyRaisedButton(
+                  onPressed: () {},
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  color: Color.fromARGB(255, 88, 83, 67),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: Text(
+                    'ingresar',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              )
+            ],
+            //child: Container(child: Text("saludos")),
+          )),
     );
   }
 }
