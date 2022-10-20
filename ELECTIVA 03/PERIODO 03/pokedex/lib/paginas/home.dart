@@ -5,6 +5,8 @@ import 'dart:convert' as convert;
 //"flutter pub add cached_network_image" instalar libreria para que busque el valor de los enlaces de img de internet
 import 'package:cached_network_image/cached_network_image.dart';
 
+import 'detallepokemon.dart';
+
 class principalHome extends StatefulWidget {
   const principalHome({Key? key}) : super(key: key);
 
@@ -177,6 +179,14 @@ class _principalHomeState extends State<principalHome> {
                                   ])),
                             ),
                             onTap: () {
+                              //TODO: llamar pantalla
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => DetallePokemon(
+                                          pokemonDetalle: pokedesk[index],
+                                          color: Colors.green,
+                                          idpokemon: index)));
                             },
                           );
                         },
