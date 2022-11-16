@@ -2,6 +2,7 @@
 //firebase en conexión con el proyecto de flutter
 //$flutter pub add cloud_firestore ultimo paso para poder añadir configuración de
 //firebase en conexión con el proyecto de flutter con la nube
+//flutterfire configure con este comando configurara el proyecto automaticamente
 
 import 'package:flutter/material.dart';
 
