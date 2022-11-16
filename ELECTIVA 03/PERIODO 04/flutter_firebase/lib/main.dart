@@ -1,5 +1,7 @@
 //$flutter pub add firebase_core ultimo paso para poder añadir configuración de
 //firebase en conexión con el proyecto de flutter
+//$flutter pub add cloud_firestore ultimo paso para poder añadir configuración de
+//firebase en conexión con el proyecto de flutter con la nube
 
 import 'package:flutter/material.dart';
 
