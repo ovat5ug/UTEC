@@ -1,3 +1,5 @@
+//$flutter pub add firebase_core ultimo paso para poder aadir configuracion de
+//firebase en conexion con el proyecto de flutter
 import 'package:flutter/material.dart';
 
 void main() {
