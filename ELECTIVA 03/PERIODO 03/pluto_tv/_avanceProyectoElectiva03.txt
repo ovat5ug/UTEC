@@ -1,0 +1,14 @@
+en este repositorio se encontrara la actualizacion de los diferentes avances que se hagan al proyecto elegido en la electiva 03
+
+desarrollo de una aplicacion usando el lenguaje flutter
+Aplicacion de reproduccion de contenido en streaming (video)
+
+Integrantes del grupo de trabajo
+
+Carlos Alexis Chávez Gómez          25-4103-2017
+Wilmer Adiel Hernández Rodríguez    25-3480-2008
+Luis David León Alejo               25-4294-2016
+Víctor Rodrigo Merino Benavides     25-3369-2017
+Ruben Escobar Ortegon               25-0001-2018
+Luis Gustavo Pérez Alberto          25-4879-2006    
+Geovany Alexander Pérez Martínez    25-3173-2014
